@@ -4,16 +4,31 @@ import numpy as np
 import joblib
 import pickle
 import pathlib
-
+import csv
 
 app = Flask(__name__, template_folder = './template/public',static_folder='./template/public')
 
 model_disease = joblib.load('./model/model.pkl')
 model_insurance = joblib.load('./model/insurance_model.pkl')
 
+def read_region_from_csv(file_path):
+    unique_regions = set()
+
+    with open(file_path, 'r') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+
+        # Assuming the first row contains column headers
+        if 'region' in csv_reader.fieldnames:
+            for row in csv_reader:
+                unique_regions.add(row['region'])
+
+    return sorted(list(unique_regions))  # Convert set to list and sort
+
 @app.route("/", methods = ['GET'])
 def home():
-    return render_template('index.html')
+    file_path = 'D:\AIT\Sem 1\Machine Learning\Medical_prediction\Medical_prediction\source_code\data\disease_insurance_price_final.csv'
+    regions = read_region_from_csv(file_path)
+    return render_template('index.html', regions=regions)
 
 @app.route("/predict", methods=['POST'])
 def predict_insurance():
@@ -85,7 +100,7 @@ def predict_insurance():
     # print(message)
     # return jsonify(result), 200
 
-    return print('exercise')
+    return exercise
         
 if __name__ == "__main__":
     app.run(host='127.0.0.1',port='8000',debug=True)
