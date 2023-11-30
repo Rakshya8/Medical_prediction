@@ -30,7 +30,7 @@ def test_predict_insurance(client):
         'height': 170,
         'children': 2,
         'region': 1,
-        'disease': 'AIDS'  # Replace with an actual disease
+        'disease': 1  # Replace with an actual disease
     }
 
     # Make a POST request to the Flask app
