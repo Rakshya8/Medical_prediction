@@ -4,7 +4,7 @@ services:
     command: python3 main.py
     #command: python app.py
     # command: tail -f /dev/null
-    image: rakshya23/medical_insurance:g6.1
+    image: rakshya23/medical_insurance:latest
     # ports:
     #   - 8081:80
     environment:

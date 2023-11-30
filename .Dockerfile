@@ -22,5 +22,5 @@ RUN pip3 install forex-python
 
 WORKDIR /root/source_code
 
-# COPY ./source_code /root/code
+COPY ./source_code /root/source_code
 CMD tail -f /dev/null
