@@ -63,7 +63,7 @@ def test_predict_insurance_invalid(client):
         'height': 170,
         'children': 2,
         'region': '1',
-        'disease': 'AIDS'
+        'disease': 1
     }
     response = client.post('/predict', json=test_data, content_type='application/json')
     assert response.status_code == 200
