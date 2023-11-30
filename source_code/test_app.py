@@ -48,30 +48,3 @@ def test_predict_insurance(client):
     assert 'text11_header' in result
     assert 'text11' in result
 # Comments
-# def test_predict_insurance_invalid(client):
-#     # Test with invalid input (e.g., missing required fields)
-#     test_data = {
-#         'exercise': '1',
-#         'smoking': '1',
-#         'alcohol': '1',
-#         'sedentary': '1',
-#         'stress': '1',
-#         'drug': '1',
-#         'age': 30,
-#         'sex': '1',
-#         'weight': 70,
-#         'height': 170,
-#         'children': 2,
-#         'region': '1',
-#         'disease': 1
-#     }
-#     response = client.post('/predict', json=test_data, content_type='application/json')
-#     assert response.status_code == 200
-#     result = response.get_json()
-#     assert 'error' in result
-#     # Add more specific assertions based on your expected result
-
-# def test_predict_insurance_invalid_method(client):
-#     # Test with an invalid request method (GET instead of POST)
-#     response = client.get('/predict')
-#     assert response.status_code == 405  # Method Not Allowed
