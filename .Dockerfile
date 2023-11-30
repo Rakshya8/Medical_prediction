@@ -18,6 +18,7 @@ RUN pip3 install dash[testing]
 RUN pip3 install pytest-depends
 RUN pip3 install xgboost==2.0.2
 RUN pip3 install mlflow
+RUN pip3 install forex-python
 
 WORKDIR /root/code
 
