@@ -47,7 +47,7 @@ def test_predict_insurance(client):
     assert 'type' in result
     assert 'text11_header' in result
     assert 'text11' in result
-# Comment
+# Comments
 # def test_predict_insurance_invalid(client):
 #     # Test with invalid input (e.g., missing required fields)
 #     test_data = {
