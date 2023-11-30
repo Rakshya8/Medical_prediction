@@ -24,7 +24,7 @@ def test_predict_insurance(client):
         'sedentary': 1,
         'stress': 1,
         'drug': 1,
-        'age_group': 1,
+        'age': 10,
         'sex': 1,
         'weight': 70,
         'height': 170,
