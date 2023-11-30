@@ -1,15 +1,15 @@
 version: '3'
 services:
   dash-demo:
-    command: python3 main.py
+    command: python3 app.py
     #command: python app.py
     # command: tail -f /dev/null
     image: rakshya23/medical_insurance:latest
     # ports:
     #   - 8081:80
     environment:
-      - http_proxy=http://192.41.170.23:3128
-      - http_proxy=http://192.41.170.23:3128
+      - HOST=0.0.0.0
+      - PORT=80
     # env_file:
     #   - .env
     
