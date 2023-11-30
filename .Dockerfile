@@ -20,7 +20,7 @@ RUN pip3 install xgboost==2.0.2
 RUN pip3 install mlflow
 RUN pip3 install forex-python
 
-WORKDIR /root/code
+WORKDIR /root/source_code
 
 # COPY ./source_code /root/code
 CMD tail -f /dev/null
